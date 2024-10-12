@@ -80,7 +80,7 @@ export default function Home()
                   </Tabs.Panel>
                   <Tabs.Panel value="gallery" pb="xs">
                     <div className="md:flex">
-                      <h3 className="text-lg">Rs. 600.00 <span className="line-through text-gray-500 ml-2">Rs. 1,500.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 500.00</Button>
+                      <h3 className="text-lg">Rs. 600.00 <span className="line-through text-gray-500 ml-2">Rs. 1,500.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 900.00</Button>
                     </div>
                   </Tabs.Panel>
                   <Tabs.Panel value="account" pb="xs">
