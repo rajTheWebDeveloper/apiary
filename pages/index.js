@@ -13,7 +13,6 @@ export default function Home()
 {
 
   let [details,setDetails]=useState({quantity:"2 Kg",net:"1"})
-  const [loading,setLoading]=useState(true)
   const [domLoaded, setDomLoaded] = useState(true);
 
 
@@ -59,7 +58,7 @@ export default function Home()
     return null
   }
   return <main className="flex justify-center w-[90%] max-w-[1200px] bg-white mx-auto mt-10 rounded-lg overflow-hidden">
-    {!loading ? <Grid gutter={30}>
+      <Grid gutter={30}>
       <Grid.Col span={{base:12,md:6}}>
        <ImageCarousel/>
       </Grid.Col>
@@ -123,6 +122,6 @@ export default function Home()
             </Stack>
           </div>
       </Grid.Col>
-    </Grid>:<Skeleton count={5}/>}
+    </Grid>
   </main>
 }
