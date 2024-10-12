@@ -75,17 +75,17 @@ export default function Home()
                 <Tabs defaultValue="chat" inverted>
                   <Tabs.Panel value="chat" pb="xs">
                     <div className="md:flex">
-                      <h3 className="text-lg">Rs. 1000.00 <span className="line-through text-gray-500 ml-2">Rs. 2,00.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 1000.00</Button>
+                      <h3 className="text-lg">Rs. 1000.00 <span className="line-through text-gray-500 ml-2">Rs. 2,000.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 1000.00</Button>
                     </div>
                   </Tabs.Panel>
                   <Tabs.Panel value="gallery" pb="xs">
                     <div className="md:flex">
-                      <h3 className="text-lg">Rs. 600.00 <span className="line-through text-gray-500 ml-2">Rs. 1,50.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 500.00</Button>
+                      <h3 className="text-lg">Rs. 600.00 <span className="line-through text-gray-500 ml-2">Rs. 1,500.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 500.00</Button>
                     </div>
                   </Tabs.Panel>
                   <Tabs.Panel value="account" pb="xs">
                     <div className="md:flex">
-                      <h3 className="text-lg">Rs. 400.00 <span className="line-through text-gray-500 ml-2">Rs. 1,20.00</span></h3>
+                      <h3 className="text-lg">Rs. 400.00 <span className="line-through text-gray-500 ml-2">Rs. 1,200.00</span></h3>
                     </div>
                   </Tabs.Panel>
 
