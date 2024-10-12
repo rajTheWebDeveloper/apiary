@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.saira-condensed-thin {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.saira-condensed-extralight {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.saira-condensed-light {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.saira-condensed-regular {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.saira-condensed-medium {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.saira-condensed-semibold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.saira-condensed-bold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.saira-condensed-extrabold {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.saira-condensed-black {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.logo-text 
+{
+  font-family: "Saira Condensed", sans-serif;
+}
