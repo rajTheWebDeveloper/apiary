@@ -1,6 +1,8 @@
 import ImageCarousel from "@/components/Carousel";
 import { Grid, Stack } from '@mantine/core';
 import { useEffect, useState } from "react";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import { Rating } from '@mantine/core';
 import { Button } from '@mantine/core';
 import { Tabs } from '@mantine/core';
@@ -10,9 +12,9 @@ import { Select } from '@mantine/core';
 export default function Home()
 {
 
-  let [details,setDetails]=useState({quantity:"1 Kg",net:"1"})
-
-  const [domLoaded, setDomLoaded] = useState(false);
+  let [details,setDetails]=useState({quantity:"2 Kg",net:"1"})
+  const [loading,setLoading]=useState(true)
+  const [domLoaded, setDomLoaded] = useState(true);
 
 
   const openWhatsApp = () => {
@@ -40,6 +42,10 @@ export default function Home()
   }
   useEffect(() => {
     setDomLoaded(true);
+    setTimeout(()=>
+    {
+      setLoading(false)
+    },2000)
   }, []);
 
 
@@ -53,9 +59,9 @@ export default function Home()
     return null
   }
   return <main className="flex justify-center w-[90%] max-w-[1200px] bg-white mx-auto mt-10 rounded-lg overflow-hidden">
-    <Grid gutter={30}>
+    {!loading ? <Grid gutter={30}>
       <Grid.Col span={{base:12,md:6}}>
-        <ImageCarousel/>
+       <ImageCarousel/>
       </Grid.Col>
       <Grid.Col span={{base:12,md:6}}>
           <div className="py-4 px-6 md:py-8 md:px-4">
@@ -117,6 +123,6 @@ export default function Home()
             </Stack>
           </div>
       </Grid.Col>
-    </Grid>
+    </Grid>:<Skeleton count={5}/>}
   </main>
 }
