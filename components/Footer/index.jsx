@@ -38,6 +38,6 @@ export default function Footer()
                 </div>
             </Grid.Col>
         </Grid>
-        <p className="text-center mt-8 bg-[#FE9700] py-2">&copy; All rights reserved MandM Apiaries mb-4</p>
+        <p className="text-center mt-8 bg-[#FE9700] py-2">&copy; All rights reserved MandM Apiaries</p>
    </section>
 }
