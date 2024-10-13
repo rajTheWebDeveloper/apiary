@@ -34,7 +34,7 @@ export default function Promises()
                     <FaCreditCard className="mx-6 my-4" size={26}/>
                     <div>
                         <h2 className='text-lg font-semibold'>Safe Transactions</h2>
-                        <p>to answer all your queries</p>
+                        <p>for worry-free shopping</p>
                     </div>
                 </Flex>
             </Grid.Col>
