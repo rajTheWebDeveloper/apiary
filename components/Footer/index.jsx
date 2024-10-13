@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer()
 {
-   return <section className="w-full text-white">
+   return <section className="w-full text-white mt-8">
         <Grid>
             <Grid.Col span={{base:12,md:4}}>
                 <Image src={logo}/>
