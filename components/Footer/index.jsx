@@ -1,15 +1,43 @@
+import { Grid, Stack } from "@mantine/core";
+import logo from '../../public/logo.png'
+import Image from "next/image";
+
 export default function Footer()
 {
-   return <section className="text-white text-center mt-14 h-auto flex items-center justify-center w-[100vw] bg-[#FC9800]">
-        <div className="limit max-w-[1200px] float-start">
-            <div className="founders">
-                <h2>Founders</h2>
-                <div className="list flex justify-center gap-4">
-                    <h3>Manoj Kumar</h3>
-                    <h3>Muni Babu</h3>
+   return <section className="w-full text-white">
+        <Grid>
+            <Grid.Col span={{base:12,md:4}}>
+                <Image src={logo}/>
+            </Grid.Col>
+            <Grid.Col span={{base:12,md:4}}>
+                <div className="pt-6 px-8 md:pt-8 md:py-6 md:px-6">
+                    <Stack gap={7}>
+                        <h2 className="font-bold text-lg text-[#FE9700] mb-4">Contact Info</h2>
+                        <p>Trade Name: MandM Apiaries</p>
+                        <h2>Founders</h2>
+                        <div className="flex gap-4">
+                            <p className="text-[#FE9700]">Manoj Kumar</p>
+                            <p className="text-[#FE9700]">Muni Babu</p>
+                        </div>
+                        <p>Customer care number</p>
+                        <p>8978441610</p>
+                    </Stack>
                 </div>
-            </div>
-            <h2>&copy; M&M Apiaries All rights are reserved 2024</h2>
-        </div>
+            </Grid.Col>
+            <Grid.Col span={{base:12,md:4}}>
+                <div className="pt-6 px-8 md:pt-8 md:py-6 md:px-6">
+                    <Stack gap={7}>
+                        <h2 className="font-bold text-lg text-[#FE9700] mb-4">Helpful links</h2>
+                        <p>FAQ</p>
+                        <p>Shipping Policy</p>
+                        <p>Refund Policy</p>
+                        <p>Terms of Service</p>
+                        <p>Privacy Policy</p>
+                        <p>Contact us</p>
+                    </Stack>
+                </div>
+            </Grid.Col>
+        </Grid>
+        <p className="text-center mt-8 bg-[#FE9700] py-2">&copy; All rights reserved MandM Apiaries mb-4</p>
    </section>
 }

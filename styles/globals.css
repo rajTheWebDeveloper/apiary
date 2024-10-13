@@ -84,3 +84,22 @@ body {
 {
   font-family: "Saira Condensed", sans-serif;
 }
+
+@keyframes scrollLeft 
+{
+   0%
+   {
+     transform: translate(100)
+   }
+   100%
+   {
+    transform: translate(-100%)
+   }
+}
+
+
+
+.scroll 
+{
+  animation: scrollLeft 5s linear infinite;
+}
