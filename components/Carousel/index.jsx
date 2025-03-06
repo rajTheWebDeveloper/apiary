@@ -1,7 +1,14 @@
 import { Carousel } from '@mantine/carousel';
 import Image from 'next/image';
 import HeroImage from '../../public/HeroImage.jpg'
-import Honey from '../../public/honey.jpg'
+import HeroMain from '../../public/hero-main.jpeg'
+import img2 from '../../public/img2.jpeg'
+import img3 from '../../public/img3.jpeg'
+import img4 from '../../public/img4.jpeg'
+import img5 from '../../public/img5.jpeg'
+import img6 from '../../public/img6.jpeg'
+import img7 from '../../public/img7.jpeg'
+import img8 from '../../public/img8.jpeg'
 import '@mantine/carousel/styles.css';
 
 
@@ -13,10 +20,25 @@ export default function ImageCarousel() {
             <Image className="w-full h-full object-cover" src={HeroImage} alt="" />
         </Carousel.Slide>
         <Carousel.Slide>
-            <Image className="w-[100%] h-[100%] object-cover" src={Honey} alt="" />
+            <Image className="w-full h-full object-cover" src={img2} alt="" />
         </Carousel.Slide>
         <Carousel.Slide>
-            <img className="w-[100%] h-[100%] object-cover" src="https://images.unsplash.com/photo-1473973266408-ed4e27abdd47?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9uZXl8ZW58MHx8MHx8fDA%3D" alt="" />
+            <Image className="w-[100%] h-[100%] object-cover" src={img3} alt="" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+            <Image className="w-[100%] h-[100%] object-cover" src={img4} alt="" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+            <Image className="w-[100%] h-[100%] object-cover" src={img5} alt="" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+            <Image className="w-[100%] h-[100%] object-cover" src={img6} alt="" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+            <Image className="w-[100%] h-[100%] object-cover" src={img7} alt="" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+            <Image className="w-[100%] h-[100%] object-cover" src={img8} alt="" />
         </Carousel.Slide>
     </Carousel>
     </div>

@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import Footer from "@/components/Footer";
 import Promises from "@/components/Promises";
 import { useEffect, useState } from "react";
+import Scroll from "@/components/Scroll";
 
 const theme = {
   colors: {

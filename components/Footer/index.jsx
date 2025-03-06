@@ -16,11 +16,11 @@ export default function Footer()
                         <p>Trade Name: MandM Apiaries</p>
                         <h2>Founders</h2>
                         <div className="flex gap-4">
-                            <p className="text-[#FE9700]">Manoj Kumar</p>
                             <p className="text-[#FE9700]">Muni Babu</p>
+                            <p className="text-[#FE9700]">Manoj Kumar</p>
                         </div>
                         <p>Customer care number</p>
-                        <p>8978441610</p>
+                        <p>8008241610</p>
                     </Stack>
                 </div>
             </Grid.Col>

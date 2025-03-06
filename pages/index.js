@@ -14,13 +14,14 @@ export default function Home()
 {
 
   let [details,setDetails]=useState({quantity:"2 Kg",net:"1"})
+  let [variant,setVariant]=useState({variant:"Multiflora"})
   const [domLoaded, setDomLoaded] = useState(false);
 
 
   const openWhatsApp = () => {
     const countryCode = '91'; 
-    const phoneNumber = '8978441610'; 
-    const message = `Hello, I would like to purchase ${details.quantity} of pure honey with a quantity of ${details.net} jars`; 
+    const phoneNumber = '8008241610'; 
+    const message = `Hello, I would like to purchase ${details.quantity} of ${variant.variant} with a quantity of ${details.net} bottles`; 
     const whatsappURL = `https://wa.me/${countryCode}${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
   };
@@ -41,10 +42,23 @@ export default function Home()
     })
   }
 
+  let handleVariantChange=(value)=>
+    {
+      setVariant((prev)=>
+      {
+        return {...prev,variant:value}
+      })
+    }
+
   useEffect(()=>
   {
     setDomLoaded(true)
   },[])
+
+  useEffect(()=>
+  {
+    console.log(variant,"This is Variant")
+  },[variant])
 
   if(!domLoaded)
   {
@@ -68,38 +82,88 @@ export default function Home()
                       <Rating value={4.5} fractions={2} readOnly /> 
                       <span className="ml-2">89 Reviews</span>
                     </div>
-                    
-                    <h2 className="text-2xl font-bold">Natural Honey</h2>
 
-                    <Tabs defaultValue="chat" inverted>
+                    <div className="">
+                        <Select
+                          label="Variant"
+                          placeholder="Multiflora"
+                          data={['Multiflora', 'Ajwain', 'Wild Honey']}
+                          value={variant.variant}
+                          onChange={handleVariantChange}
+                        />
+                    </div>
+
+                    {console.log(variant.variant,"VV")}
+
+                   {variant.variant=="Multiflora" &&  <Tabs defaultValue="chat" inverted>
                       <Tabs.Panel value="chat" pb="xs">
                         <div className="md:flex">
-                          <h3 className="text-lg">Rs. 1000.00 <span className="line-through text-gray-500 ml-2">Rs. 2,000.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 1000.00</Button>
+                          <h3 className="text-lg">Rs. 599.00 <span className="line-through text-gray-500 ml-2">Rs. 999.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 400.00</Button>
                         </div>
                       </Tabs.Panel>
                       <Tabs.Panel value="gallery" pb="xs">
+                      
                         <div className="md:flex">
-                          <h3 className="text-lg">Rs. 600.00 <span className="line-through text-gray-500 ml-2">Rs. 1,500.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 900.00</Button>
-                        </div>
-                      </Tabs.Panel>
-                      <Tabs.Panel value="account" pb="xs">
-                        <div className="md:flex">
-                          <h3 className="text-lg">Rs. 400.00 <span className="line-through text-gray-500 ml-2">Rs. 1,200.00</span></h3>
+                          <h3 className="text-lg">Rs. 299.00 <span className="line-through text-gray-500 ml-2">Rs. 599.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 300.00</Button>
                         </div>
                       </Tabs.Panel>
 
-                      <Tabs.List className="mt-2">
+                      <Tabs.List className="mt-1 md:mt-2">
                         <Tabs.Tab value="chat">
-                          <Button onClick={()=>handleQuantity("2 Kg")} variant="outline" color="#FC9800" size="xs">2 Kg</Button>
-                        </Tabs.Tab>
-                        <Tabs.Tab value="gallery">
                           <Button onClick={()=>handleQuantity("1 Kg")} variant="outline" color="#FC9800" size="xs">1 Kg</Button>
                         </Tabs.Tab>
-                        <Tabs.Tab value="account">
-                          <Button onClick={()=>handleQuantity("0.5 Kg")} variant="outline" color="#FC9800" size="xs">500 gm</Button>
+                        <Tabs.Tab value="gallery">
+                          <Button onClick={()=>handleQuantity("0.5 Kg")} variant="outline" color="#FC9800" size="xs">0.5 Kg</Button>
                         </Tabs.Tab>
                       </Tabs.List>
-                    </Tabs>
+                    </Tabs>}
+
+                    {variant.variant=="Ajwain" &&  <Tabs defaultValue="chat" inverted>
+                      <Tabs.Panel value="chat" pb="xs">
+                        <div className="md:flex">
+                          <h3 className="text-lg">Rs. 599.00 <span className="line-through text-gray-500 ml-2">Rs. 999.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 400.00</Button>
+                        </div>
+                      </Tabs.Panel>
+                      <Tabs.Panel value="gallery" pb="xs">
+                      
+                        <div className="md:flex">
+                          <h3 className="text-lg">Rs. 349.00 <span className="line-through text-gray-500 ml-2">Rs. 599.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 250.00</Button>
+                        </div>
+                      </Tabs.Panel>
+
+                      <Tabs.List className="mt-1 md:mt-2">
+                        <Tabs.Tab value="chat">
+                          <Button onClick={()=>handleQuantity("1 Kg")} variant="outline" color="#FC9800" size="xs">1 Kg</Button>
+                        </Tabs.Tab>
+                        <Tabs.Tab value="gallery">
+                          <Button onClick={()=>handleQuantity("0.5 Kg")} variant="outline" color="#FC9800" size="xs">0.5 Kg</Button>
+                        </Tabs.Tab>
+                      </Tabs.List>
+                    </Tabs>}
+
+                    {variant.variant=="Wild Honey" &&  <Tabs defaultValue="chat" inverted>
+                      <Tabs.Panel value="chat" pb="xs">
+                        <div className="md:flex">
+                          <h3 className="text-lg">Rs. 599.00 <span className="line-through text-gray-500 ml-2">Rs. 999.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 400.00</Button>
+                        </div>
+                      </Tabs.Panel>
+                      <Tabs.Panel value="gallery" pb="xs">
+                      
+                        <div className="md:flex">
+                          <h3 className="text-lg">Rs. 299.00 <span className="line-through text-gray-500 ml-2">Rs. 599.00</span></h3> <Button size="xs" color="#FDA136" className="mt-2 md:mt-0 md:ml-6">Sale • Save Rs. 300.00</Button>
+                        </div>
+                      </Tabs.Panel>
+
+                      <Tabs.List className="mt-1 md:mt-2">
+                        <Tabs.Tab value="chat">
+                          <Button onClick={()=>handleQuantity("1 Kg")} variant="outline" color="#FC9800" size="xs">1 Kg</Button>
+                        </Tabs.Tab>
+                        <Tabs.Tab value="gallery">
+                          <Button onClick={()=>handleQuantity("0.5 Kg")} variant="outline" color="#FC9800" size="xs">0.5 Kg</Button>
+                        </Tabs.Tab>
+                      </Tabs.List>
+                    </Tabs>}
+
 
                     <div className="">
                         <Select
